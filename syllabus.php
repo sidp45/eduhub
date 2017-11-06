@@ -69,6 +69,8 @@ $csname=$_REQUEST['id'];
 </div>
 <br><br><br><br>
 <div class="clearfix"></div>
-
+<?php
+include "fa.php";
+?>
 </body>
 </html>
