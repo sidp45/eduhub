@@ -4,6 +4,22 @@ include("db.php");
 if(isset($_REQUEST['submit'])){
 	$email=$_REQUEST['uname'];
 	$pwd=$_REQUEST['pwd'];
+	if($email==NULL){
+		echo "<script>alert('Kindly fill the email.');</script>";
+	}
+	else
+	if($pwd==NULL)
+	{
+		echo "<script>alert('Kindly fill the password.');</script>";
+	}
+	else{
+	$sql="select * from registration where email='$email'";
+	$result=mysqli_query($conn,$sql);
+	if(mysqli_num_rows($result)<1){
+		echo "<script>alert('invalid Email');</script>";
+	}
+	else
+	{
 	$sql="select * from registration where email='$email'";
 	$result=mysqli_query($conn,$sql);
 	if(mysqli_num_rows($result)<1){
@@ -24,6 +40,7 @@ if(isset($_REQUEST['submit'])){
 		{
 			echo "<script>alert('invalid password');</script>";
 		}
+	}
 	}
 }
 ?>
