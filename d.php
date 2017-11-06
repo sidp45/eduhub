@@ -86,6 +86,9 @@ include "ha.php";
 
 </table>
 </form>
+<?php
+include "fa.php";
+?>
 </body>
 </html>
 

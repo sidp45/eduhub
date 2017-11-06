@@ -106,6 +106,9 @@ include "ha.php";
 </tr>
 </table>
 </form>
+<?php
+include "fa.php";
+?>
 </body>
 </html>
 
