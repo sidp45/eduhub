@@ -149,7 +149,8 @@ include("ha.php");
 			}
 			?>
 			</div>
-			
-				
+			<?php
+			include "fa.php";
+			?>
 	</body>
 </html>
